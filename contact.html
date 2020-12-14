@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,900&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+		<div class="hero">
+			<h1>My profile</h1>
+			<h2>The future depends on what you do today.</h2>
+		</div>
+    	<div class="container">
+		<nav>
+             <a href="index.html" class="button">HOME</a>
+			<a href="about.html" class="button">ABOUT ME</a>
+            <a href="contact.html" class="button">CONTACT ME</a>
+            <a href="gallery.html" class="button">GALLERY</a>
+            <a href="admin.html" class="button">ADMIN</a>
+            
+		</nav>
+		<main role="main">
+            <h3>Get in Touch</h3>
+			<p align="center">You can reach me at sharanya.marineni@gmail.com if needed!</p>
+				<div class="container">
+  		 <h2>Contact us</h2>
+	  <div id="error_message"></div>
+	  <form id="myform" onsubmit="return validate();">
+	    <div class="input_field">
+	        Name: <input type="text" placeholder="Name" id="name">
+	    </div>
+	    <div class="input_field">
+	        Subject: <input type="text" placeholder="Subject" id="subject">
+	    </div>
+	    <div class="input_field">
+	        Phone: <input type="text" placeholder="Phone" id="phone">
+	    </div>
+	    <div class="input_field">
+	        Email: <input type="text" placeholder="Email" id="email">
+	    </div>
+	    <div class="input_field">
+	       Message: <textarea placeholder="Message" id="message"></textarea>
+	    </div>
+	    <div class="btn">
+	        <input type="submit" value="submit">
+	    </div>
+	  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+		</main>
+	    </div>
+	<footer>
+		<div class="container">
+			<div class="social">
+				<a href="https://github.com/sharanyamarineni"><img src="images/github.png" height="36" width="36" alt="github logo"></a>
+				<a href="http://www.linkedin.com/"><img src="images/linkedin.png" height="36" width="36" alt="linkedin logo"></a>
+				<a href="http://www.twitter.com/"><img src="images/twitter.png" height="36" width="36" alt="twitter"></a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

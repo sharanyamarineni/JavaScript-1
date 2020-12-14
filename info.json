@@ -1,0 +1,15 @@
+{
+    "galleryInfo": [{
+        "id": 1,
+        "name": "pikachu",
+        "information": "pikachu",
+        "date": 2641994,
+        "url": "http://pngimg.com/uploads/pokemon/pokemon_PNG104.png"
+    }, {
+        "id": 2,
+        "name": "pokemon",
+        "information": "pokemon-2",
+        "date": 1591967,
+        "url": "http://pngimg.com/uploads/pokemon/pokemon_PNG135.png"
+    }]
+}

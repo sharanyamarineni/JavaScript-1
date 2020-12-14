@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,900&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<div class="hero">
+			<h1>My profile</h1>
+			<h2>The future depends on what you do today.</h2>
+		</div>
+		
+    	<div class="container">
+		<nav>
+             <a href="index.html" class="button">HOME</a>
+			<a href="about.html" class="button">ABOUT ME</a>
+            <a href="contact.html" class="button">CONTACT ME</a>
+            <a href="gallery.html" class="button">GALLERY</a>
+            <a href="admin.html" class="button">ADMIN</a>
+            
+            
+		</nav>
+		<main role="main">
+		     <div class="container">
+        <div class="about">
+            <div class="flex-col">
+                <h4>Click below to add an image</h4>
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#editModal" data-type="add">ADD IMAGE</button>
+                <hr />
+                <span class="on-hr">OR</span>
+                <h6>Edit Below</h6>
+            </div>
+        </div>
+        <div id="images_placeholder">
+
+
+        </div>
+    </div>
+    		 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <input type="hidden" id="image-id" value="id" />
+                        <div class="form-group">
+                            <label for="image-name" class="col-form-label">Name:</label>
+                            <input type="text" class="form-control" id="image-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image-url" class="col-form-label">URL:</label>
+                            <input type="text" class="form-control" id="image-url" pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image-date" class="col-form-label">Uploaded Date:</label>
+                            <input type="date" class="form-control" id="image-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image-information" class="col-form-label">Information:</label>
+                            <textarea class="form-control" id="image-information"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" form="editForm" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">U sure?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body custom-modal-body">
+                    <img id="deleteImagePlaceholder" src="" width=200 height=200 alt="">
+                </div>
+                <div class="modal-footer custom-modal-footer">
+<!--                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>  -->  
+                  <button id="deleteSubmit" onclick="deleteObject()" type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+		  <br>
+		  <br>
+		  <br>
+		  <hr>
+	   </main>
+	   </div>
+
+		<footer>
+
+			<div class="social">
+				<a href="https://github.com/sharanyamarineni"><img src="images/github.png" height="36" width="36" alt="github logo"></a>
+				<a href="http://www.linkedin.com/"><img src="images/linkedin.png" height="36" width="36" alt="linkedin logo"></a>
+				<a href="http://www.twitter.com/"><img src="images/twitter.png" height="36" width="36" alt="twitter"></a>
+			</div>
+	</footer>
+ 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
